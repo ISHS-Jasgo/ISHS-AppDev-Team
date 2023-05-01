@@ -1,9 +1,9 @@
 export class UserDatabase {
     mysql = require('mysql');
     db = this.mysql.createConnection({
-        host: 'localhost',
+        host: '210.114.22.146',
         user: 'root',
-        password: 'password',
+        password: 'ishs123!',
         database: 'test'
     });   
     constructor() {

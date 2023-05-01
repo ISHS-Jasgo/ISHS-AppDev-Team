@@ -1,7 +1,7 @@
-import { NextFunction, Request, Response } from "express";
+import { NextFunction, Request, Response, Router } from "express";
 import { UserDatabase } from "../database/user_data";
 
-const loginRouter = require('express').Router();
+const loginRouter: Router = require('express').Router();
 const userDatabase = new UserDatabase();
 
 loginRouter.post('/', (req: Request, res: Response, next: NextFunction) => {

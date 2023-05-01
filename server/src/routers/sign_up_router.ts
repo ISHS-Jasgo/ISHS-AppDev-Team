@@ -1,7 +1,7 @@
-import { NextFunction, Request, Response } from "express";
+import { NextFunction, Request, Response, Router } from "express";
 import { UserDatabase } from "../database/user_data";
 
-const signUpRouter = require('express').Router();
+const signUpRouter: Router = require('express').Router();
 const userDatabase = new UserDatabase();
 
 
