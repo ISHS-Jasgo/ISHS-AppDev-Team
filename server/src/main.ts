@@ -5,12 +5,18 @@ import { logger } from './logging/central_log';
 
 import { cf } from './config/config';
 
-const app = express();
+import bodyParser from 'body-parser';
 
+const app = express();
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use('*', (req: Request, res: Response, next: NextFunction) => {
     logger.debug(`Request to '${req.url}' over ${req.method}`);
     next();
 });
+
+app.use('/login', require('./routers/login_router'));
+app.use('/signup', require('./routers/sign_up_router'));
 
 app.get('/', (req: Request, res: Response, next: NextFunction) => {
     let q = req.query.query;
