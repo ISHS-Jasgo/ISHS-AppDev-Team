@@ -1,7 +1,7 @@
 {
-    "name": "your_name_here",
+    "name": "sigma",
     "version": "1.0.0",
-    "description": "YOUR_NAME_HERE",
+    "description": "sigma",
     "main": "index.js",
     "scripts": {
         "build": "npx tsc",
