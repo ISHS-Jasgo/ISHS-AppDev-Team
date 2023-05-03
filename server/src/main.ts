@@ -6,8 +6,22 @@ import { logger } from './logging/central_log';
 import { cf } from './config/config';
 
 import bodyParser from 'body-parser';
+import { Socket } from 'socket.io';
 
 const app = express();
+
+const server = require('http').createServer(app);
+
+const socket: Socket = require('socket.io')(server);
+
+socket.on('connection', (socket: Socket) => {
+    logger.info('Socket connected');
+    console.log('Socket connected');
+    socket.on('disconnect', () => {
+        logger.info('Socket disconnected');
+    });
+});
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use('*', (req: Request, res: Response, next: NextFunction) => {
@@ -20,7 +34,7 @@ app.use('/signup', require('./routers/sign_up_router'));
 
 app.get('/', (req: Request, res: Response, next: NextFunction) => {
     let q = req.query.query;
-    res.send(q);
+    res.sendFile(__dirname + '/client/index.html');
 });
 
 app.get('*', (req: Request, res: Response, next: NextFunction) => {
@@ -31,6 +45,6 @@ app.post('*', (req: Request, res: Response, next: NextFunction) => {
     res.status(404).send(crespRest(404));
 });
 
-app.listen(cf.server.port, () => {
-    logger.info(`Server started on port ${cf.server.port}`)
+server.listen(80, () => {
+    logger.info(`Server started on port ${80}`)
 });
