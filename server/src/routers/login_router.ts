@@ -4,7 +4,6 @@ import { QueryChecker } from "../util/query_checker";
 
 const loginRouter: Router = require('express').Router();
 const userDatabase = new UserDatabase();
-const injectionRegex = new RegExp(/#|-|\/|\\|\"|\'|;/g);
 loginRouter.post('/', (req: Request, res: Response, next: NextFunction) => {
     let key: number = req.body.key;
     let name: string = req.body.name;
