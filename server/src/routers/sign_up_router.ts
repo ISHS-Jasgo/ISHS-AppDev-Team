@@ -1,17 +1,18 @@
 import { NextFunction, Request, Response, Router } from "express";
 import { UserDatabase } from "../database/user_data";
+import { QueryChecker } from "../util/query_checker";
 
 const signUpRouter: Router = require('express').Router();
 const userDatabase = new UserDatabase();
-const injectionRegex = new RegExp(/#|-|\/|\\|\"|\'|;/g);
 
 signUpRouter.post('/', (req: Request, res: Response, next: NextFunction) => {
     let key: number = req.body.key;
     let name: string = req.body.name;
     let privilege: number = req.body.privilege;
     let password: string = req.body.password;
-    if (key && name && privilege >= 0 && privilege < 3 && password) {
-        if (injectionRegex.test(name) || injectionRegex.test(password)) {
+    let checker = new QueryChecker();
+    if (privilege >= 0 && privilege < 3 && checker.notNull(key, name, password)) {
+        if (checker.hasInvalidString(name, password)) {
             res.status(400).send("Invalid characters in name or password");
         }
         else {
