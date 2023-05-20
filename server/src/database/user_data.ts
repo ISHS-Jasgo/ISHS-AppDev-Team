@@ -1,3 +1,5 @@
+import { logger } from '../logging/central_log';
+
 export class UserDatabase {
     mysql = require('mysql');
     db = this.mysql.createConnection({
@@ -11,7 +13,7 @@ export class UserDatabase {
             if (err) {
                 throw err;
             }
-            console.log('Connected to database');
+            logger.info('Connected to database(user)');
         });
     }
 

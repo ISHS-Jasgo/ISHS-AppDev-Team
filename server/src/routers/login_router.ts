@@ -15,6 +15,7 @@ loginRouter.post('/', (req: Request, res: Response, next: NextFunction) => {
         } else {
             userDatabase.login(key, name, password);
         }
+        //TODO: 세션 설정
         res.status(200).send();
     } else {
         res.status(400).send();
