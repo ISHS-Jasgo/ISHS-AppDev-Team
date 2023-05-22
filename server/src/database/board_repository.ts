@@ -1,12 +1,13 @@
 import { logger } from '../logging/central_log';
+import { cf } from '../config/config';
 
 export class BoardDatabase {
     mysql = require('mysql');
     db = this.mysql.createConnection({
-        host: '210.114.22.146',
-        user: 'root',
-        password: 'ishs123!',
-        database: 'test'
+        host: cf.database.host,
+        user: cf.database.user,
+        password: cf.database.password,
+        database: cf.database.database
     });   
     constructor() {
         this.db.connect((err: any) => {

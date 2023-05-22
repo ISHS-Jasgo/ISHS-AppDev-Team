@@ -1,12 +1,13 @@
 import { logger } from '../logging/central_log';
+import { cf } from '../config/config';
 
 export class UserDatabase {
     mysql = require('mysql');
     db = this.mysql.createConnection({
-        host: '210.114.22.146',
-        user: 'root',
-        password: 'ishs123!',
-        database: 'test'
+        host: cf.database.host,
+        user: cf.database.user,
+        password: cf.database.password,
+        database: cf.database.database
     });   
     constructor() {
         this.db.connect((err: any) => {
@@ -18,24 +19,27 @@ export class UserDatabase {
     }
 
     signUp(key: number, name: string, privilege: number, password: string) {
-        if (!this.userExists(key)) {
+        return new Promise<boolean>((resolve, reject) => {
             this.db.query(`INSERT INTO users (\`key\`, name, privilege, password) VALUES (${key}, '${name}', ${privilege}, '${password}')`, (err: any, result: any) => {
                 if (err) {
-                    throw err;
+                    reject(err);
                 }
-                console.log(result);
+                resolve(result.affectedRows > 0);
             });
-        }
+        });
     }
 
     login(key: number, name: string, password: string) {
-        this.db.query(`SELECT * FROM users WHERE \`key\`=${key} AND name='${name}' AND password='${password}'`, (err: any, result: any) => {
-            if (err) {
-                throw err;
-            }
-            console.log(result);
+        return new Promise<boolean>((resolve, reject) => {
+            this.db.query(`SELECT * FROM users WHERE \`key\`=${key} AND name='${name}' AND password='${password}'`, (err: any, result: any) => {
+                if (err) {
+                    reject(err);
+                }
+                resolve(result.length > 0);
+            });
         });
     }
+    
 
     getUsers() {
         this.db.query('SELECT * FROM users', (err: any, result: any) => {
@@ -90,6 +94,18 @@ export class UserDatabase {
                 throw err;
             }
             console.log(result);
+        });
+    }
+
+    getPrivilege(key: number) {
+        return new Promise<number>((resolve, reject) => {
+            this.db.query(`SELECT privilege FROM users WHERE \`key\`=${key}`, (err: any, result: any) => {
+                if (err) {
+                    reject(err);
+                }
+                let privilege: number = result[0].privilege;
+                resolve(privilege);
+            });
         });
     }
 

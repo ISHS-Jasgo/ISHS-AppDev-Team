@@ -12,10 +12,10 @@ export class QueryChecker {
 
     hasInvalidString(...params: string[]) {
         let injectionRegex = new RegExp(/#|-|\/|\\|\"|\'|;/g);
-        let result = true;
+        let result = false;
         params.forEach((element: string) => {
             if (injectionRegex.test(element)) {
-                result = false;
+                result = true;
             }
         });  
         return result;
