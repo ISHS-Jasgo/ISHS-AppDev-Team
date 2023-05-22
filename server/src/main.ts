@@ -56,8 +56,10 @@ app.use('*', (req: Request, res: Response, next: NextFunction) => {
 
 app.use('/login', require('./routers/login_router'));
 app.use('/signup', require('./routers/sign_up_router'));
+app.use('/logout', require('./routers/logout_router'));
 app.use('/test', require('./routers/test_router'));
 app.use('/board', require('./routers/board_router'))
+
 
 app.get('/', (req: Request, res: Response, next: NextFunction) => {
     let q = req.query.query;
