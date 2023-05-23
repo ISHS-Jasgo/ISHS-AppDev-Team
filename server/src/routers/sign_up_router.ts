@@ -12,7 +12,7 @@ signUpRouter.post('/', (req: Request, res: Response, next: NextFunction) => {
     let privilege: number = req.body.privilege;
     let password: string = req.body.password;
     let checker = new QueryChecker();
-    if (privilege >= 0 && privilege < 3 && checker.notNull(key, name, password)) {
+    if (privilege >= 0 && checker.notNull(key, name, password)) {
         if (checker.hasInvalidString(name, password)) {
             res.status(400).send("Invalid characters in name or password");
         }
