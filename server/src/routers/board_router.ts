@@ -1,6 +1,7 @@
 import { NextFunction, Request, Response, Router } from "express";
 import { BoardDatabase } from "../database/board_repository";
 import { QueryChecker } from "../util/query_checker";
+import { PrivilegeEnum, UserPrivilege } from "../util/user_privilege";
 
 import { respRest } from "../rest/rest_producer";
 import { logger } from "../logging/central_log";
@@ -22,16 +23,18 @@ boardRouter.post('/create', (req: Request, res: Response, next: NextFunction) =>
     let title: string = req.body.title;
     let content: string = req.body.content;
     let checker = new QueryChecker();
-
+    let userPrivilege = new UserPrivilege(req.session.privilege ? req.session.privilege : 0);
     try {
-        if(checker.notNull(title, content)) {
-            if(title.length > 30 || content.length > 9000) {
-                res.status(400).send(respRest(400, 1));
-            }
-            else {
-                // TODO: USER UID HERE(0)
-                boardDatabase.addPost(title, content, 0);
-                res.status(200).send(respRest(200, 0));
+        if (!userPrivilege.hasPrivilegeAll(PrivilegeEnum.WRITE_POST)) {
+            if(checker.notNull(title, content)) {
+                if(title.length > 30 || content.length > 9000) {
+                    res.status(400).send(respRest(400, 1));
+                }
+                else {
+                    // TODO: USER UID HERE(0)
+                    boardDatabase.addPost(title, content, 0);
+                    res.status(200).send(respRest(200, 0));
+                }
             }
         }
     } catch(err) {
@@ -48,23 +51,24 @@ boardRouter.post('/create', (req: Request, res: Response, next: NextFunction) =>
  */
 boardRouter.delete('/delete', (req: Request, res: Response, next: NextFunction) => {
     let code: number = req.body.code;
-    
+    let userPrivilege = new UserPrivilege(req.session.privilege ? req.session.privilege : 0);
     try {
-        //TODO: 권한 체크
-        boardDatabase.existsByCode(code)
-        .then((rex: boolean) => {
-            if(rex) {
-                boardDatabase.deletePostByCode(code);
-                res.status(200).send(respRest(200, 0));
-            }
-            else {
-                res.status(400).send(respRest(400, 1));
-            }
-        })
-        .catch((err: any) => {
-            logger.error(err);
-            res.status(500).send(respRest(500, 2));
-        });
+        if (!userPrivilege.hasPrivilegeAll(PrivilegeEnum.DELETE_POST)) {
+            boardDatabase.existsByCode(code)
+            .then((rex: boolean) => {
+                if(rex) {
+                    boardDatabase.deletePostByCode(code);
+                    res.status(200).send(respRest(200, 0));
+                }
+                else {
+                    res.status(400).send(respRest(400, 1));
+                }
+            })
+            .catch((err: any) => {
+                logger.error(err);
+                res.status(500).send(respRest(500, 2));
+            });
+        }
     } catch(err) {
         logger.error(err);
         res.status(500).send(respRest(500, 2));
@@ -83,28 +87,29 @@ boardRouter.put('/update', (req: Request, res: Response, next: NextFunction) => 
     let title: string = req.body.title;
     let content: string = req.body.content;
     let checker = new QueryChecker();
-
+    let userPrivilege = new UserPrivilege(req.session.privilege ? req.session.privilege : 0);
     try {
-        //TODO: 권한 체크
-        if(checker.notNull(title, content)) {
-            if(title.length > 30 || content.length > 9000) {
-                res.status(400).send(respRest(400, 4));
-            }
-            else {
-                boardDatabase.existsByCode(code)
-                .then((rex: boolean) => {
-                    if(rex) {
-                        boardDatabase.updatePost(code, title, content);
-                        res.status(200).send(respRest(200, 0));
-                    }
-                    else {
-                        res.status(400).send(respRest(400, 1));
-                    }
-                })
-                .catch((err: any) => {
-                    logger.error(err);
-                    res.status(500).send(respRest(500, 2));
-                });
+        if (!userPrivilege.hasPrivilegeAll(PrivilegeEnum.UPDATE_POST)) {
+            if(checker.notNull(title, content)) {
+                if(title.length > 30 || content.length > 9000) {
+                    res.status(400).send(respRest(400, 4));
+                }
+                else {
+                    boardDatabase.existsByCode(code)
+                    .then((rex: boolean) => {
+                        if(rex) {
+                            boardDatabase.updatePost(code, title, content);
+                            res.status(200).send(respRest(200, 0));
+                        }
+                        else {
+                            res.status(400).send(respRest(400, 1));
+                        }
+                    })
+                    .catch((err: any) => {
+                        logger.error(err);
+                        res.status(500).send(respRest(500, 2));
+                    });
+                }
             }
         }
     } catch(err) {
