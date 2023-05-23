@@ -19,8 +19,11 @@ loginRouter.post('/', (req: Request, res: Response, next: NextFunction) => {
                     req.session.key = key;
                     req.session.name = name;
                     req.session.password = password;
-                    req.session.save(() => console.log("Session saved"));
-                    res.status(200).send(respRest(200, 0));
+                    userDatabase.getPrivilege(key).then((privilege: number) => {
+                        req.session.privilege = privilege;
+                        req.session.save(() => console.log("Session saved"));
+                        res.status(200).send(respRest(200, 0));
+                    });
                 } else {
                     res.status(400).send(respRest(400, 1));
                 }

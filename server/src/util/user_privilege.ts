@@ -1,11 +1,11 @@
 export enum PrivilegeEnum {
-    NONE = 0,
     CONNECT = 1 << 0,
     STUDENT = 1 << 1,
     WRITE_POST = 1 << 2,
     WRITE_COMMENT = 1 << 3,
     UPDATE_POST = 1 << 4,
     DELETE_POST = 1 << 5,
+    ALL = 0xffffffff,
 }
 
 export class UserPrivilege {
