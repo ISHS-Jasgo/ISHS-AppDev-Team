@@ -59,4 +59,17 @@ export class UserPrivilege {
         }
         return result;
     }
+
+    public getPrivilegeListString(): string[] {
+        let result: string[] = [];
+        for(let p in PrivilegeEnum) {
+            if(!isNaN(Number(p))) {
+                let n: number = Number(p);
+                if(this.hasPrivilege(n)) {
+                    result.push(PrivilegeEnum[n]);
+                }
+            }
+        }
+        return result;
+    }
 }
