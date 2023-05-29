@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html><head>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><meta charset="utf-8">
+  <title>게시판 초안</title>
+  <meta name="generator" content="Google Web Designer 15.2.1.0306">
+  <style id="gwd-text-style">p {
+    margin: 0px;
+}
+h1 {
+    margin: 0px;
+}
+h2 {
+    margin: 0px;
+}
+h3 {
+    margin: 0px;
+}</style>
+  <style>html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+}
+body {
+    background-color: transparent;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    -moz-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    perspective: 1400px;
+    -webkit-perspective: 1400px;
+    -moz-perspective: 1400px;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+}
+body * {
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+}
+.gwd-rect-1e2e {
+    position: absolute;
+    width: 1536px;
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    height: 106px;
+    background-image: none;
+    border-image-source: none;
+    border-image-width: 1;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    border-color: transparent;
+    background-color: rgb(1, 180, 246);
+    top: 758px;
+    left: 0px;
+}
+.gwd-rect-1821 {
+    position: absolute;
+    border-style: solid;
+    height: 36px;
+    width: 174px;
+    border-image-source: none;
+    border-image-width: 1;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    background-image: none;
+    background-color: rgb(1, 180, 246);
+    border-radius: 10px;
+    border-width: 1px;
+    box-sizing: border-box;
+    border-color: rgb(0, 0, 0);
+    transform-origin: 87px 18px 0px;
+    -webkit-transform-origin: 87px 18px 0px;
+    -moz-transform-origin: 87px 18px 0px;
+    left: 681px;
+    top: 678px;
+}
+.gwd-rect-1g0v {
+    position: absolute;
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    width: 1278px;
+    height: 464px;
+    left: 129px;
+    top: 282px;
+}
+.gwd-p-j1cx {
+    position: absolute;
+    width: 174px;
+    text-align: center;
+    font-size: 18px;
+    transform-origin: 50% 50% 0px;
+    -webkit-transform-origin: 50% 50% 0px;
+    -moz-transform-origin: 50% 50% 0px;
+    height: 26px;
+    color: rgb(255, 255, 255);
+    left: 681px;
+    top: 683px;
+}
+.gwd-rect-w7yq {
+    position: absolute;
+    width: 639px;
+    box-sizing: border-box;
+    border-width: 1px;
+    background-clip: content-box;
+    height: 41px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    background-color: rgb(232, 232, 232);
+    left: 129px;
+    top: 282px;
+}
+.gwd-rect-7um3 {
+    position: absolute;
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    height: 217px;
+    transform-origin: 50% 50% 0px;
+    -webkit-transform-origin: 50% 50% 0px;
+    -moz-transform-origin: 50% 50% 0px;
+    top: 395px;
+    width: 1256px;
+    left: 140px;
+    background-image: none;
+    border-image-source: none;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    background-color: rgb(232, 232, 232);
+    border-color: rgb(97, 97, 97);
+    border-image-width: 3;
+}
+.gwd-line-1xea {
+    position: absolute;
+    left: 140px;
+    height: 1px;
+    stroke-width: 1px;
+    stroke: rgb(0, 0, 0);
+    top: 378px;
+    transform-origin: 50% 50% 0px;
+    -webkit-transform-origin: 50% 50% 0px;
+    -moz-transform-origin: 50% 50% 0px;
+    width: 1256px;
+}
+.gwd-span-kpks {
+    position: absolute;
+    text-align: center;
+    width: 86px;
+    font-size: 34px;
+    height: 45px;
+    transform-origin: 43px 22.5px 0px;
+    -webkit-transform-origin: 43px 22.5px 0px;
+    -moz-transform-origin: 43px 22.5px 0px;
+    left: 200px;
+    top: 326px;
+}
+.gwd-span-13g1 {
+    position: absolute;
+    text-align: center;
+    width: 287px;
+    height: 26px;
+    font-size: 19px;
+    left: 294px;
+    top: 290px;
+}
+.gwd-span-zi5m {
+    position: absolute;
+    text-align: center;
+    width: 287px;
+    height: 26px;
+    font-size: 19px;
+    top: 290px;
+    left: 944px;
+    transform-origin: 143.5px 13px 0px;
+    -webkit-transform-origin: 143.5px 13px 0px;
+    -moz-transform-origin: 143.5px 13px 0px;
+}
+.gwd-rect-1qtx {
+    position: absolute;
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    height: 125px;
+    left: 129px;
+    top: 97px;
+    transform-origin: 50% 50% 0px;
+    -webkit-transform-origin: 50% 50% 0px;
+    -moz-transform-origin: 50% 50% 0px;
+    width: 1278px;
+}
+.gwd-span-pq6v {
+    position: absolute;
+    left: 151px;
+    width: 673px;
+    text-align: left;
+    font-size: 60px;
+    top: 139px;
+    height: 71px;
+    transform-origin: 50% 50% 0px;
+    -webkit-transform-origin: 50% 50% 0px;
+    -moz-transform-origin: 50% 50% 0px;
+}
+[data-gwd-group="grade"] .gwd-grp-86zt.gwd-rect-e5e6 {
+    position: absolute;
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    height: 25px;
+    transform-origin: 50% 50% 0px;
+    -webkit-transform-origin: 50% 50% 0px;
+    -moz-transform-origin: 50% 50% 0px;
+    width: 157px;
+    left: 0px;
+    top: 0px;
+}
+[data-gwd-group="grade"] .gwd-grp-86zt.gwd-span-soz0 {
+    position: absolute;
+    width: 157px;
+    height: 25.334px;
+    font-size: 18px;
+    text-align: left;
+    letter-spacing: normal;
+    left: 0px;
+    top: 0px;
+}
+[data-gwd-group="grade"] {
+    width: 157px;
+    height: 25.3333px;
+}
+[data-gwd-group="type"] .gwd-grp-c4kx.gwd-rect-hmhv {
+    position: absolute;
+    width: 157px;
+    height: 25.334px;
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    left: 0.667px;
+    top: 0px;
+}
+[data-gwd-group="type"] .gwd-grp-c4kx.gwd-span-1lfr {
+    position: absolute;
+    width: 157px;
+    height: 24px;
+    font-size: 18px;
+    left: 0px;
+    top: 0.667px;
+    text-align: left;
+}
+[data-gwd-group="type"] {
+    width: 157.667px;
+    height: 25.3333px;
+}
+[data-gwd-group="select"] .gwd-grp-14ie.gwd-div-11q0 {
+    position: absolute;
+    left: 0px;
+    top: 1px;
+}
+[data-gwd-group="select"] .gwd-grp-14ie.gwd-div-17hm {
+    position: absolute;
+    left: 176px;
+    top: 0px;
+}
+[data-gwd-group="select"] {
+    width: 333.667px;
+    height: 26.3229px;
+}
+.gwd-div-1jro {
+    position: absolute;
+    left: 129px;
+    top: 237px;
+}
+.gwd-span-ryzd {
+    position: absolute;
+    left: 129px;
+    top: 61px;
+    font-size: 18px;
+    text-align: center;
+    width: 255px;
+    height: 21px;
+    color: rgb(120, 120, 120);
+}
+.gwd-oval-h538 {
+    position: absolute;
+    stroke: rgb(0, 0, 0);
+    stroke-width: 1px;
+    height: 32px;
+    width: 32px;
+    transform-origin: 15.7857px 16px 0px;
+    -webkit-transform-origin: 15.7857px 16px 0px;
+    -moz-transform-origin: 15.7857px 16px 0px;
+    left: 163px;
+    top: 333px;
+    fill: rgb(240, 70, 70);
+}
+.gwd-p-kcaf {
+    position: absolute;
+    left: 163px;
+    width: 32px;
+    text-align: center;
+    transform-origin: 50% 50% 0px;
+    -webkit-transform-origin: 50% 50% 0px;
+    -moz-transform-origin: 50% 50% 0px;
+    font-size: 20px;
+    height: 32px;
+    top: 333px;
+}
+.gwd-span-1kz7 {
+    position: absolute;
+    width: 560px;
+    height: 41px;
+    font-size: 18px;
+    text-align: left;
+    left: 151px;
+    top: 406px;
+}
+.gwd-span-2n09 {
+    position: absolute;
+    text-align: center;
+    font-size: 20px;
+    width: 108px;
+    height: 26px;
+    top: 336px;
+    transform-origin: 54px 13px 0px;
+    -webkit-transform-origin: 54px 13px 0px;
+    -moz-transform-origin: 54px 13px 0px;
+    left: 768px;
+}
+[data-gwd-group="writebutton"] {
+    width: 0px;
+    height: 0px;
+}
+.gwd-div-hxc8 {
+    position: absolute;
+    top: 683px;
+    transform-origin: 50% 50% 0px;
+    -webkit-transform-origin: 50% 50% 0px;
+    -moz-transform-origin: 50% 50% 0px;
+    left: 681px;
+}
+.gwd-svg-173p {
+    position: absolute;
+    border-style: solid;
+    height: 36px;
+    width: 174px;
+    border-image-source: none;
+    border-image-width: 1;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    background-image: none;
+    background-color: rgb(1, 180, 246);
+    border-radius: 10px;
+    border-width: 1px;
+    box-sizing: border-box;
+    border-color: rgb(0, 0, 0);
+    transform-origin: 87px 18px 0px;
+    -webkit-transform-origin: 87px 18px 0px;
+    -moz-transform-origin: 87px 18px 0px;
+    left: 681px;
+    top: 678px;
+}
+[data-gwd-group="selectquestion"] .gwd-grp-1ox4.gwd-svg-1qyb {
+    position: absolute;
+    border-style: solid;
+    height: 36px;
+    width: 174px;
+    border-image-source: none;
+    border-image-width: 1;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    background-image: none;
+    background-color: rgb(1, 180, 246);
+    border-radius: 10px;
+    border-width: 1px;
+    box-sizing: border-box;
+    border-color: rgb(0, 0, 0);
+    transform-origin: 87px 18px 0px;
+    -webkit-transform-origin: 87px 18px 0px;
+    -moz-transform-origin: 87px 18px 0px;
+    top: 0px;
+    left: 337px;
+}
+[data-gwd-group="selectquestion"] {
+    width: 511px;
+    height: 36px;
+}
+.gwd-div-x250 {
+    position: absolute;
+    top: 331px;
+    width: 482px;
+    transform-origin: 50% 50% 0px;
+    -webkit-transform-origin: 50% 50% 0px;
+    -moz-transform-origin: 50% 50% 0px;
+    left: 893px;
+}
+.gwd-div-uc90 {
+    left: -340.667px;
+}
+.gwd-div-13fs {
+    left: 340.667px;
+}
+[data-gwd-group="selectquestion"] .gwd-grp-1ox4.gwd-svg-1m9n {
+    position: absolute;
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    background-color: rgb(232, 232, 232);
+    width: 327px;
+    transform-origin: 50% 50% 0px;
+    -webkit-transform-origin: 50% 50% 0px;
+    -moz-transform-origin: 50% 50% 0px;
+    height: 26px;
+    top: 5px;
+    left: 0px;
+}
+[data-gwd-group="selectquestion"] .gwd-grp-1ox4.gwd-p-1sa8 {
+    position: absolute;
+    width: 174px;
+    text-align: center;
+    font-size: 18px;
+    transform-origin: 50% 50% 0px;
+    -webkit-transform-origin: 50% 50% 0px;
+    -moz-transform-origin: 50% 50% 0px;
+    height: 26px;
+    color: rgb(255, 255, 255);
+    top: 5px;
+    left: 337px;
+}
+.gwd-svg-117r {
+    position: absolute;
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    background-color: rgb(232, 232, 232);
+    transform-origin: 50% 50% 0px;
+    -webkit-transform-origin: 50% 50% 0px;
+    -moz-transform-origin: 50% 50% 0px;
+    top: 331px;
+    height: 36px;
+    width: 119px;
+    left: 763px;
+}
+@media (min-width: 0) and (max-width: 102px) and (min-height: 0) and (max-height: 102px) {}
+@media (min-width: 1362px) and (max-width: 1368px) and (min-height: 653px) and (max-height: 659px) {}
+@media (min-width: 1533px) and (max-width: 1539px) and (min-height: 861px) and (max-height: 867px) {}</style>
+  
+<style>#pagedeck { overflow: hidden !important; }</style></head>
+
+<body class="htmlNoPages">
+  
+  <svg data-gwd-shape="rectangle" class="gwd-rect-7um3"></svg>
+  <svg data-gwd-shape="rectangle" class="gwd-rect-1g0v"></svg>
+  <script gwd-served-sizes="" type="application/json">["1365x656", "1536x864"]</script>
+  <svg data-gwd-shape="rectangle" class="gwd-rect-1e2e"></svg>
+  <svg data-gwd-shape="rectangle" class="gwd-rect-1821"></svg>
+  <svg data-gwd-shape="rectangle" class="gwd-svg-173p"></svg>
+  <p class="gwd-p-j1cx">등록하기</p>
+  <svg data-gwd-shape="rectangle" class="gwd-rect-w7yq"></svg>
+  <svg data-gwd-shape="line" preserveAspectRatio="none" viewBox="0 0 1256 1" class="gwd-line-1xea">
+    <line x1="0" x2="1256" y1="0.5" y2="0.5"></line>
+  </svg><span class="gwd-span-13g1">질문하기</span>
+  <span class="gwd-span-zi5m">답변하기</span>
+  <svg data-gwd-shape="rectangle" class="gwd-rect-1qtx"></svg><span class="gwd-span-pq6v">BIGBANG!</span>
+  <div class="gwd-div-1jro" data-gwd-group="select">
+      <div class="gwd-div-11q0 gwd-grp-14ie" data-gwd-group="grade">
+      <svg data-gwd-shape="rectangle" class="gwd-rect-e5e6 gwd-grp-86zt"></svg><span class="gwd-span-soz0 gwd-grp-86zt">&nbsp;▽학년</span></div>
+      <div class="gwd-div-17hm gwd-grp-14ie" data-gwd-group="type">
+      <svg data-gwd-shape="rectangle" class="gwd-rect-hmhv gwd-grp-c4kx"></svg><span class="gwd-span-1lfr gwd-grp-c4kx">&nbsp;▽게시판</span></div>
+    </div><span class="gwd-span-ryzd">메인페이지로 이동 | 내 게시글</span>
+  <span class="gwd-span-kpks">답변</span>
+  <svg data-gwd-shape="oval" preserveAspectRatio="none" viewBox="0 0 32 32" class="gwd-oval-h538">
+    <ellipse cx="50%" cy="50%" rx="15.5" ry="15.5"></ellipse>
+  </svg>
+  <p class="gwd-p-kcaf">A</p><span class="gwd-span-1kz7">반드시 공지를 읽고 글을 작성해주세요.<br class="">공지를 읽지 않은 것에 대한 책임은 모두 본인에게 있습니다.</span>
+  <svg data-gwd-shape="rectangle" class="gwd-svg-117r"></svg>
+  <div class="gwd-div-hxc8" data-gwd-group="writebutton"></div>
+  <div class="gwd-div-x250" data-gwd-group="selectquestion">
+      <svg data-gwd-shape="rectangle" class="gwd-svg-1qyb gwd-grp-1ox4"></svg>
+      <p class="gwd-grp-1ox4 gwd-p-1sa8">선택하기</p>
+      <svg data-gwd-shape="rectangle" class="gwd-grp-1ox4 gwd-svg-1m9n"></svg>
+    </div><span class="gwd-span-2n09">답변할 질문</span>
+
+</body></html>
