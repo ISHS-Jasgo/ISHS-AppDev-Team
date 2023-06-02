@@ -12,7 +12,7 @@ testRouter.get('/', (req: Request, res: Response, next: NextFunction) => {
     res.status(200).send(req.body);
 });
 
-testRouter.get('/upload', fileUploadBuilder.upload().single("file"), (req: Request, res: Response, next: NextFunction) => {
+testRouter.get('/upload', fileUploadBuilder.setType("image").upload().single("file"), (req: Request, res: Response, next: NextFunction) => {
     console.log(req.file);
     res.status(200).send(req.file);
 });
