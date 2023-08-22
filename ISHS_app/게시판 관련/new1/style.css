@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-size: 12px;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    box-sizing: border-box;
+    transition: 0.1s;
+}
+svg{
+    width: 1em;
+    height: 1em;
+}
+
+
+
+.container{
+    width: 100%;
+    height: 100vh;
+    padding: 40px 100px 30px 100px;
+}
+
+
+
+
+footer{
+    width: 100%;
+    height: 55px;
+    background-color: #2F5597;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+
+
+
+
+.header{
+    width: 100%;
+    margin-bottom: 7px;
+    padding: 0 5px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.header > a{
+    color: #777;
+    padding: 0 5px;
+}
+.header > a:hover{
+    color: #333;
+}
+.bar{
+    border-right: 1px solid #777;
+    height: 12px;
+}
+
+
+
+.banner{
+    width: 100%;
+    height: 150px;
+    border: 1px solid #aaa;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+.search-outter{
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.posit{
+    width: 100px;
+    border: 1px solid #aaa;
+    border-radius: none;
+}
+.search-box{
+    width: 200px;
+    height: 22px;
+    border: 1px solid #2F5597;
+    border-left: none;
+    position: relative;
+}
+.search-button{
+    width: 42px;
+    height: 100%;
+    background-color: #2F5597;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.search-button:hover{
+    background-color: #2f8b97;
+}
+.search-box > input{
+    width: 100px;
+    height: 100%;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 3px;
+}
+
+
+
+
+
+
+.contents{
+    width: 100%;
+    border: 1px solid #aaa;
+}
+.w-select{
+    width: 100%;
+    height: 25px;
+    display: flex;
+}
+.w-select > div{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 1px solid #aaa;
+    background-color: #eee;
+}
+.w-select > div:hover{
+    background-color: #f8f8f8;
+}
+.freedom{
+    border-right: 1px solid #aaa;
+}
+#w-active{
+    border-bottom: 1px solid #fff;
+    background-color: #fff;
+}
+
+
+
+.posts{
+    width: 100%;
+    height: calc(100% - 25px);
+    padding: 0 10px;
+}
+.posts > div{
+    width: 100%;
+    padding-bottom: 15px;
+}
+.posts > div > div:last-child > div{
+    border: none;
+}
+.quastion-posts{
+    display: none;
+}
+
+
+
+
+.post{
+    width: 100%;
+}
+.post-inner{
+    width: 100%;
+    height: 30px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #aaa;
+}
+#hot-post{
+    margin-top: 7px;
+    background-color: #f1f1f1;
+    border: 1px solid #aaa;
+    border-radius: 7px;
+}
+#hot-post .post-left .hot{
+    display: block;
+}
+
+
+
+
+.post-left{
+    display: flex;
+}
+.hot{
+    display: none;
+}
+.hot > span{
+    font-family: 'Black Han Sans', sans-serif;
+    color: red;
+}
+.hot > svg{
+    width: 10px;
+    height: 10px;
+    fill: red;
+    margin-right: 12px;
+}
+
+
+
+
+
+.post-right{
+    display: flex;
+}
+.post-right > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+}
+.post-right > div:last-child{
+    margin-right: none;
+}
+.post-right > div > svg{
+    margin-right: 2px;
+}
+
+
+
+
+
+

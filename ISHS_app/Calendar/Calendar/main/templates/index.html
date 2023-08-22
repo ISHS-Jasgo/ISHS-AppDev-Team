@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css'>
+    <link rel="stylesheet" href="../static/css/style.css" >
+    <link rel="stylesheet" href="../static/css/schedule.css">
+    <title>동아리 리그전 일정</title>
+</head>
+<body>
+    <header>
+        <img class="school_img" id="mark" src="../static/images/2.png">
+        <p class="school_name" id="p1">인천과학고등학교</p>
+        <p class="title" id="p2">동아리 리그전 일정</p>
+    </header>
+    <div class="container theme-showcase"></div>
+    <div id="holder" class="row" ></div>
+    <fieldset>
+        <p class ="schedule_name">일정 선택</p>
+        <div>
+            <input type="checkbox" id="league" name="league" checked/>
+            <label for="all-day">동아리 리그전</label>
+        </div>
+        <div>
+            <input type="checkbox" id="type1" name="type1" checked/>
+            <label for="all-day">1학년</label>
+        </div>
+        <div>
+            <input type="checkbox" id="type2" name="type2" checked/>
+            <label for="all-day">2학년</label>
+        </div>
+        <div>
+            <input type="checkbox" id="type3" name="type3" checked/>
+            <label for="all-day">3학년</label>
+        </div>
+    </fieldset>
+    <script type="module" src="../static/js/SimpleDate.js"></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script type="module" src="../static/js/index.js"></script>
+</body>
+</html>
