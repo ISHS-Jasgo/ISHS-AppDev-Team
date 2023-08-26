@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700;900&family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>NEW2</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="header">
+            <a href="#">메인페이지</a>
+            <div class="bar"></div>
+            <a href="#">내 질문</a>
+        </div>
+        <div class="banner">
+            <img src="">
+        </div>
+        <div class="search-outter">
+            <select class="posit" name="" id="">
+                <option value="">전체 글</option>
+                <option value="">1학년</option>
+                <option value="">2학년</option>
+                <option value="">3학년</option>
+            </select>
+            <div class="search-box">
+                <div class="search-button">검색</div>
+                <input type="text">
+            </div>
+        </div>
+        <div class="contents">
+            <div class="qna-select">
+                <div class="ask-btn active">질문하기</div>
+                <div class="answer-btn">답변하기</div>
+            </div>
+            <div class="posts">
+                <div class="ask-div active">
+                    <div class="ask-header">
+                        <div class="q-logo">Q</div>
+                        <span>질문</span>
+                        <input class="ask-title" type="text" placeholder="제목을 입력하세요">
+                    </div>
+                    <div class="ask-writing">
+                        <textarea class="ask-writing-textarea" name="" id="" placeholder="내용을 입력하세요"></textarea>
+                    </div>
+                    <div class="ask-footer">
+                        <div class="ask-footer-inner">
+                            <label for="atp">ATP 추가하기</label>
+                            <select name="atp" id="atp">
+                                <option value="atp10">10 ATP</option>
+                                <option value="atp20">20 ATP</option>
+                                <option value="atp30">30 ATP</option>
+                                <option value="atp40">40 ATP</option>
+                                <option value="atp50">50 ATP</option>
+                                <option value="atp60">60 ATP</option>
+                                <option value="atp70">70 ATP</option>
+                                <option value="atp80">80 ATP</option>
+                                <option value="atp90">90 ATP</option>
+                                <option value="atp100">100 ATP</option>
+                            </select>
+                        </div>
+                        <a class="ask-regist-btn" href="#none">등록하기</a>
+                    </div>
+                </div>
+                <div class="answer-div">
+                    <div class="post hot-post">
+                        <div class="post-inner">
+                            <div class="post-left">
+                                <div class="hot">
+                                    <span>HOT</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-fire" viewBox="0 0 16 16">
+                                        <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z"/>
+                                    </svg>
+                                </div>
+                                <a class="title" href="#">이정민 지금 뭐하고 있나요</a>
+                            </div>
+                            <div class="post-right">
+                                <div class="atp-div">
+                                    <div class="atp">50</div>
+                                    <span>ATP</span>
+                                </div>
+                                <div class="reply-div">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-send" viewBox="0 0 16 16">
+                                        <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+                                      </svg>
+                                    <div class="reply">4</div>
+                                </div>
+                                <div class="view-div">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-eye" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                                    </svg>
+                                    <div class="view">13</div>
+                                </div>
+                                <div class="time">1시간 전</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <div class="post-inner">
+                            <div class="post-left">
+                                <div class="hot">
+                                    <span>HOT</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-fire" viewBox="0 0 16 16">
+                                        <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z"/>
+                                    </svg>
+                                </div>
+                                <a class="title" href="#">이정민은 누구인가요</a>
+                            </div>
+                            <div class="post-right">
+                                <div class="atp-div">
+                                    <div class="atp">50</div>
+                                    <span>ATP</span>
+                                </div>
+                                <div class="reply-div">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-send" viewBox="0 0 16 16">
+                                        <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+                                      </svg>
+                                    <div class="reply">4</div>
+                                </div>
+                                <div class="view-div">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-eye" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                                    </svg>
+                                    <div class="view">13</div>
+                                </div>
+                                <div class="time">1시간 전</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <div class="post-inner">
+                            <div class="post-left">
+                                <div class="hot">
+                                    <span>HOT</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-fire" viewBox="0 0 16 16">
+                                        <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z"/>
+                                    </svg>
+                                </div>
+                                <a class="title" href="#">이정민은 누구인가요</a>
+                            </div>
+                            <div class="post-right">
+                                <div class="atp-div">
+                                    <div class="atp">50</div>
+                                    <span>ATP</span>
+                                </div>
+                                <div class="reply-div">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-send" viewBox="0 0 16 16">
+                                        <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+                                      </svg>
+                                    <div class="reply">4</div>
+                                </div>
+                                <div class="view-div">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-eye" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                                    </svg>
+                                    <div class="view">13</div>
+                                </div>
+                                <div class="time">1시간 전</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <div class="post-inner">
+                            <div class="post-left">
+                                <div class="hot">
+                                    <span>HOT</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-fire" viewBox="0 0 16 16">
+                                        <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z"/>
+                                    </svg>
+                                </div>
+                                <a class="title" href="#">이정민은 누구인가요</a>
+                            </div>
+                            <div class="post-right">
+                                <div class="atp-div">
+                                    <div class="atp">50</div>
+                                    <span>ATP</span>
+                                </div>
+                                <div class="reply-div">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-send" viewBox="0 0 16 16">
+                                        <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+                                      </svg>
+                                    <div class="reply">4</div>
+                                </div>
+                                <div class="view-div">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-eye" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                                    </svg>
+                                    <div class="view">13</div>
+                                </div>
+                                <div class="time">1시간 전</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <div class="post-inner">
+                            <div class="post-left">
+                                <div class="hot">
+                                    <span>HOT</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-fire" viewBox="0 0 16 16">
+                                        <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z"/>
+                                    </svg>
+                                </div>
+                                <a class="title" href="#">이정민은 누구인가요</a>
+                            </div>
+                            <div class="post-right">
+                                <div class="atp-div">
+                                    <div class="atp">50</div>
+                                    <span>ATP</span>
+                                </div>
+                                <div class="reply-div">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-send" viewBox="0 0 16 16">
+                                        <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+                                      </svg>
+                                    <div class="reply">4</div>
+                                </div>
+                                <div class="view-div">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-eye" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                                    </svg>
+                                    <div class="view">13</div>
+                                </div>
+                                <div class="time">1시간 전</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <div class="post-inner">
+                            <div class="post-left">
+                                <div class="hot">
+                                    <span>HOT</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-fire" viewBox="0 0 16 16">
+                                        <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z"/>
+                                    </svg>
+                                </div>
+                                <a class="title" href="#">이정민은 누구인가요</a>
+                            </div>
+                            <div class="post-right">
+                                <div class="atp-div">
+                                    <div class="atp">50</div>
+                                    <span>ATP</span>
+                                </div>
+                                <div class="reply-div">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-send" viewBox="0 0 16 16">
+                                        <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+                                      </svg>
+                                    <div class="reply">4</div>
+                                </div>
+                                <div class="view-div">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-eye" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                                    </svg>
+                                    <div class="view">13</div>
+                                </div>
+                                <div class="time">1시간 전</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <div class="post-inner">
+                            <div class="post-left">
+                                <div class="hot">
+                                    <span>HOT</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-fire" viewBox="0 0 16 16">
+                                        <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z"/>
+                                    </svg>
+                                </div>
+                                <a class="title" href="#">이정민은 누구인가요</a>
+                            </div>
+                            <div class="post-right">
+                                <div class="atp-div">
+                                    <div class="atp">50</div>
+                                    <span>ATP</span>
+                                </div>
+                                <div class="reply-div">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-send" viewBox="0 0 16 16">
+                                        <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+                                      </svg>
+                                    <div class="reply">4</div>
+                                </div>
+                                <div class="view-div">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-eye" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                                    </svg>
+                                    <div class="view">13</div>
+                                </div>
+                                <div class="time">1시간 전</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <div class="post-inner">
+                            <div class="post-left">
+                                <div class="hot">
+                                    <span>HOT</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-fire" viewBox="0 0 16 16">
+                                        <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z"/>
+                                    </svg>
+                                </div>
+                                <a class="title" href="#">이정민은 누구인가요</a>
+                            </div>
+                            <div class="post-right">
+                                <div class="atp-div">
+                                    <div class="atp">50</div>
+                                    <span>ATP</span>
+                                </div>
+                                <div class="reply-div">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-send" viewBox="0 0 16 16">
+                                        <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+                                      </svg>
+                                    <div class="reply">4</div>
+                                </div>
+                                <div class="view-div">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-eye" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                                    </svg>
+                                    <div class="view">13</div>
+                                </div>
+                                <div class="time">1시간 전</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <div class="post-inner">
+                            <div class="post-left">
+                                <div class="hot">
+                                    <span>HOT</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-fire" viewBox="0 0 16 16">
+                                        <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z"/>
+                                    </svg>
+                                </div>
+                                <a class="title" href="#">이정민은 누구인가요</a>
+                            </div>
+                            <div class="post-right">
+                                <div class="atp-div">
+                                    <div class="atp">50</div>
+                                    <span>ATP</span>
+                                </div>
+                                <div class="reply-div">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-send" viewBox="0 0 16 16">
+                                        <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+                                      </svg>
+                                    <div class="reply">4</div>
+                                </div>
+                                <div class="view-div">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-eye" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                                    </svg>
+                                    <div class="view">13</div>
+                                </div>
+                                <div class="time">1시간 전</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <div class="post-inner">
+                            <div class="post-left">
+                                <div class="hot">
+                                    <span>HOT</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-fire" viewBox="0 0 16 16">
+                                        <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z"/>
+                                    </svg>
+                                </div>
+                                <a class="title" href="#">이정민은 누구인가요</a>
+                            </div>
+                            <div class="post-right">
+                                <div class="atp-div">
+                                    <div class="atp">50</div>
+                                    <span>ATP</span>
+                                </div>
+                                <div class="reply-div">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-send" viewBox="0 0 16 16">
+                                        <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+                                      </svg>
+                                    <div class="reply">4</div>
+                                </div>
+                                <div class="view-div">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-eye" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                                    </svg>
+                                    <div class="view">13</div>
+                                </div>
+                                <div class="time">1시간 전</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-detail">
+                    <div class="post-detail-inner">
+                        <div class="ask-header-detail">
+                            <div class="q-logo-detail">Q</div>
+                            <span>질문</span>
+                            <div class="ask-title-detail">이정민 몇 살인가요?</div>
+                            <div class="atp-div-detail">
+                                <div class="atp">50</div>
+                                <span>ATP</span>
+                            </div>
+                        </div>
+                        <div class="ask-content-detail">이정민 지금 몇 살인가요? 너무 궁금해서 잠이 안와요... 인곽 들어가면 이정민 같은 선배 있나요?</div>
+                        <div class="answer-header">
+                            <div class="a-logo">A</div>
+                            <span>답변</span>
+                        </div>
+                        <div class="answer-writing">
+                            <textarea class="answer-writing-textarea" name="" id="" placeholder="답변을 입력하세요"></textarea>
+                        </div>
+                        <div class="answer-footer">
+                            <a class="answer-list-btn" href="#none">목록보기</a>
+                            <a class="answer-regist-btn" href="#none">등록하기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer></footer>
+    </div>
+
+    <script src="./custom.js"></script>
+</body>
+</html>
