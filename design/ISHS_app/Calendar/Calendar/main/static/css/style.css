@@ -1,0 +1,144 @@
+.calendar-day {
+  width: 100px;
+  min-width: 100px;
+  max-width: 100px;
+  height: 80px;
+}
+.calendar-table {
+  margin: 0 auto;
+  width: 700px;
+}
+.selected {
+  background-color: #eee;
+}
+.outside .date {
+  color: #ccc;
+}
+.timetitle {
+  white-space: nowrap;
+  text-align: right;
+}
+.event {
+  border-top: 1px solid #b2dba1;
+  border-bottom: 1px solid #b2dba1;
+  background-image: linear-gradient(to bottom, #dff0d8 0px, #c8e5bc 100%);
+  background-repeat: repeat-x;
+  color: #3c763d;
+  border-width: 1px;
+  font-size: .75em;
+  padding: 0 .75em;
+  line-height: 2em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 1px;
+}
+.event.begin {
+  border-left: 1px solid #b2dba1;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.event.end {
+  border-right: 1px solid #b2dba1;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.event.clear {
+  background: none;
+  border: 1px solid transparent;
+}
+.table-tight > thead > tr > th,
+.table-tight > tbody > tr > th,
+.table-tight > tfoot > tr > th,
+.table-tight > thead > tr > td,
+.table-tight > tbody > tr > td,
+.table-tight > tfoot > tr > td {
+  padding-left: 0;
+  padding-right: 0;
+}
+.table-tight-vert > thead > tr > th,
+.table-tight-vert > tbody > tr > th,
+.table-tight-vert > tfoot > tr > th,
+.table-tight-vert > thead > tr > td,
+.table-tight-vert > tbody > tr > td,
+.table-tight-vert > tfoot > tr > td {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.row{
+  position: absolute;
+  margin: 30px 0 0 0;
+  padding: 0;
+  width: 50%;
+  transform: translate(50%,0);
+}
+
+
+fieldset{
+  position: absolute;
+  width: 180px;
+  right: 10%;
+  top: 40%;
+  padding: 5px;
+  border: solid 5px lightgray;
+  border-radius: 15px;
+}
+
+.schedule_name{
+  
+  background-color: gray;
+  text-align: center;
+  border-radius: 30px;
+  color: #fff;
+  padding: 7px;
+  padding-bottom: 5px;
+  font-size: large;
+  margin: 0 10px 8px 10px;
+}
+
+input {
+  margin: 0.4rem;
+}
+
+
+
+header {
+  width: 100%;
+  height: 120px;
+  padding: 0;
+  margin: 0;
+  background-color:#04AA6D;
+}
+.school_img{
+  position: absolute;
+  left: 40px;
+  top: 20px;
+  width: 80px;
+}
+.school_name{
+  position: absolute;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  top: 30px;
+  left: 138px;
+}
+.title{
+  position: absolute;
+  color: rgb(255, 255, 255);
+  font-size: 36px;
+  left: 130px;
+  top: 48px;
+}
+
+/* p,
+label {
+  font:
+    1rem 'Fira Sans',
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+} */

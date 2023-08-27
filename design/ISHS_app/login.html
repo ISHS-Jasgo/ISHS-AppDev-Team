@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>로그인곽</title>
+
+<link rel="icon" href="C:\Users\vvemm\OneDrive\문서\GitHub\ISHS-AppDev-Team\ISHS_app\android-icon-48x48.png"/> 
+<link rel="apple-touch-icon" href="C:\Users\vvemm\OneDrive\문서\GitHub\ISHS-AppDev-Team\ISHS_app\apple-icon.png"/> 
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+}
+
+.box{
+  position: absolute;
+  padding: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 20px;
+  background-color: white;
+  border: 2px solid #f1f1f1;
+  width: 500px;
+}
+
+/* Full-width input fields */
+input[type=text] {
+  width: 100%;
+  padding: 15px;
+  margin: 0;
+  display: inline-block;
+  border: 0.5px solid #b1b1b1;
+  border-radius: 10px 10px 0 0;
+}
+
+ input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 0;
+  display: inline-block;
+  border-top: none;
+  border-bottom: 0.5px solid #b1b1b1;
+  border-right: 0.5px solid #b1b1b1;
+  border-left: 0.5px solid #b1b1b1;
+  border-radius: 0 0 10px 10px;
+}
+
+
+input[type=text]:focus, input[type=password]:focus, input[type=code]:focus {
+  outline: none;
+  border: 0.5px solid #04AA6D;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.loginbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  font-size: large;
+  margin: 20px 0 0 0;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.codebtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 14px;
+  margin: 10px 0 0 83%;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  width: 120px;
+}
+
+.loginbtn:hover {
+  opacity: 1;
+}
+
+.btnA, .btnB, .btnC {
+  background-color: white;
+  color: #b1b1b1;
+  margin: 15px 10px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  width: 25%;
+}
+
+input[type=code] {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.container2 {
+  padding: 16px;
+  position: relative;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto ; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+
+</style>
+</head>
+<body>
+
+<form action="/action_page.php">
+
+  <div class="box">
+    <div class="container">
+      
+      <input type="text" placeholder="아이디" name="id" id="id" required>
+  
+      <input type="password" placeholder="비밀번호" name="psw" id="psw" required>
+  
+      <button type="submit" class="loginbtn">로그인</button>
+
+    </div>
+
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="btnA">학생 회원가입</button>
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="btnB">교직원 회원가입</button>
+    <button type="button" class="btnC">외부인 회원가입</button>
+
+  </div>
+  
+</form>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+
+    <div class="container2">
+
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+      <label for="code"><b>고유코드</b></label>
+      <input type="code" placeholder="영문/숫자 코드" name="code" required>
+
+      <button type="submit" class="codebtn">확인</button>
+    </div>
+
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
