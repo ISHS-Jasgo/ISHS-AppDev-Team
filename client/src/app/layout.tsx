@@ -1,3 +1,4 @@
+import AuthSession from '@/components/auth/AuthSession';
 import './globals.css';
 import type { Metadata } from 'next';
 
@@ -13,7 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <body>
+        <AuthSession>{children}</AuthSession>
+      </body>
     </html>
   );
 }
