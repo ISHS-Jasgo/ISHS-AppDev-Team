@@ -4,11 +4,14 @@ import { useState } from 'react';
 
 type UseInputType = [
   string,
-  React.Dispatch<React.SetStateAction<string>>,
-  JSX.Element
+  JSX.Element,
+  React.Dispatch<React.SetStateAction<string>>
 ];
 
-export default function useInput(placeHolder?: string): UseInputType {
+export default function useInput(
+  placeHolder?: string,
+  option?: any
+): UseInputType {
   const [value, setValue] = useState('');
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -21,8 +24,9 @@ export default function useInput(placeHolder?: string): UseInputType {
       onChange={onChange}
       placeholder={placeHolder || ''}
       className="h-8 w-52 pl-2 rounded-sm bg-slate-100 text-sm"
+      {...option}
     ></input>
   );
 
-  return [value, setValue, input];
+  return [value, input, setValue];
 }

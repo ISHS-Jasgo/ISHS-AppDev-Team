@@ -5,8 +5,12 @@ import CoolButton from '../ui/CoolButton';
 import { signIn } from 'next-auth/react';
 
 export default function TestLogin() {
-  const [id, setId, idInput] = useInput('학번');
-  const [password, setPassword, passwordInput] = useInput('비밀번호');
+  const [id, idInput, setId] = useInput('학번 (Ex : 292416)', {
+    type: 'number',
+  });
+  const [password, passwordInput, setPassword] = useInput('비밀번호', {
+    type: 'password',
+  });
 
   const onClick = async () => {
     const result = await signIn('credentials', {
