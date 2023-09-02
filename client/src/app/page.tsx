@@ -6,19 +6,29 @@ import { useState } from 'react';
 import Modal from '@/components/ui/Modal';
 import TestLogin from '@/components/test/TestLogin';
 import TestRegister from '@/components/test/TestRegister';
+import { useRouter } from 'next/navigation';
 
 export default function Home() {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
 
   const user = useSessionUser();
+  const router = useRouter();
 
   return (
     <div className="flex-1">
       {user ? (
-        <button onClick={() => signOut()} className="bg-red-600">
-          로그아웃
-        </button>
+        <div>
+          <button onClick={() => signOut()} className="bg-red-600">
+            로그아웃
+          </button>
+          <button
+            onClick={() => router.push('/chat')}
+            className="bg-yellow-300"
+          >
+            채팅
+          </button>
+        </div>
       ) : (
         <div>
           <button
