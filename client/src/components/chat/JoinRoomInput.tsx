@@ -24,11 +24,11 @@ export default function JoinRoom({ nickname }: Props) {
     };
     await fetch('/api/chat/new', data);
     setTitle('');
-    socket.emit('newRoom');
+    socket.emit('revalidate');
   };
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center gap-0.5">
       {titleInput}
       <CoolButton onClick={onClick}>참여하기</CoolButton>
     </div>

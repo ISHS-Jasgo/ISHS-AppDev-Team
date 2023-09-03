@@ -24,12 +24,13 @@ const chat = io.of('/chat');
 chat.on('connection', async (socket) => {
   console.log('a user connected');
 
-  const chatRooms = await (await fetch(`${apiUrl}/api/chat/find`)).json();
-  io.of('chat').emit('chatRooms', chatRooms);
-
-  socket.on('newRoom', async () => {
-    console.log('newRoom');
+  socket.on('revalidate', async () => {
+    console.log('revalidate');
     const chatRooms = await (await fetch(`${apiUrl}/api/chat/find`)).json();
-    io.of('chat').emit('chatRooms', chatRooms);
+    io.of('chat').emit('revalidate', chatRooms);
+  });
+
+  socket.on('disconnect', () => {
+    console.log('user disconnected');
   });
 });
