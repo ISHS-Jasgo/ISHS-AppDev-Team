@@ -1,4 +1,4 @@
-import AuthSession from '@/components/auth/AuthSession';
+import Wrapper from '@/components/Wrapper';
 import './globals.css';
 import type { Metadata } from 'next';
 
@@ -13,9 +13,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko">
-      <body>
-        <AuthSession>{children}</AuthSession>
+    <html lang="ko" className="w-full h-full">
+      <body className="w-full h-full">
+        <Wrapper>{children}</Wrapper>
       </body>
     </html>
   );

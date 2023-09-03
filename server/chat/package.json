@@ -17,5 +17,8 @@
     "build": "yarn tsc",
     "start": "node index.js",
     "dev": "concurrently \"yarn tsc --watch\" \"nodemon -q index.js\""
+  },
+  "imports": {
+    "@prisma/client": "../../client/node_modules/@prisma/client/index.d.ts"
   }
 }

@@ -1,61 +1,14 @@
-'use client';
+import authOptions from '@/lib/auth/auth';
+import { getServerSession } from 'next-auth';
+import UserWithSession from '@/components/page/UserWithSession';
+import UserWithoutSession from '@/components/page/UserWithoutSession';
 
-import { signOut } from 'next-auth/react';
-import useSessionUser from '@/hooks/useSessionUser';
-import { useState } from 'react';
-import Modal from '@/components/ui/Modal';
-import TestLogin from '@/components/test/TestLogin';
-import TestRegister from '@/components/test/TestRegister';
-import { useRouter } from 'next/navigation';
-
-export default function Home() {
-  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
-  const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
-
-  const user = useSessionUser();
-  const router = useRouter();
+export default async function Home() {
+  const session = await getServerSession(authOptions);
 
   return (
     <div className="flex-1">
-      {user ? (
-        <div>
-          <button onClick={() => signOut()} className="bg-red-600">
-            로그아웃
-          </button>
-          <button
-            onClick={() => router.push('/chat')}
-            className="bg-yellow-300"
-          >
-            채팅
-          </button>
-        </div>
-      ) : (
-        <div>
-          <button
-            onClick={() => setIsLoginModalOpen(true)}
-            className="bg-emerald-600"
-          >
-            로그인
-          </button>
-          <button
-            onClick={() => setIsRegisterModalOpen(true)}
-            className=" bg-indigo-600"
-          >
-            회원가입
-          </button>
-        </div>
-      )}
-
-      {isLoginModalOpen && (
-        <Modal modalCloser={() => setIsLoginModalOpen(false)}>
-          <TestLogin />
-        </Modal>
-      )}
-      {isRegisterModalOpen && (
-        <Modal modalCloser={() => setIsRegisterModalOpen(false)}>
-          <TestRegister />
-        </Modal>
-      )}
+      {session?.user ? <UserWithSession /> : <UserWithoutSession />}
     </div>
   );
 }
