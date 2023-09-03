@@ -1,6 +1,13 @@
 import Wrapper from '@/components/Wrapper';
 import './globals.css';
 import type { Metadata } from 'next';
+import { Noto_Sans_KR } from 'next/font/google';
+
+const noto_sans_kr = Noto_Sans_KR({
+  weight: ['100', '300', '400', '500', '700', '900'],
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -13,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" className="w-full h-full">
+    <html lang="ko" className={`w-full h-full ${noto_sans_kr.className}`}>
       <body className="w-full h-full">
         <Wrapper>{children}</Wrapper>
       </body>

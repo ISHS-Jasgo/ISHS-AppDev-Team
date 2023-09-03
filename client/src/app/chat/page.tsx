@@ -10,7 +10,10 @@ export default async function Page() {
   return (
     <ChatSocketProvider>
       <div className="w-full h-full flex justify-center bg-slate-50">
-        <div className="w-full py-7 mx-28 md:mx-56 my-8 bg-white shadow flex flex-col place-content-between">
+        <div className="w-full py-5 px-3 mx-20 md:mx-56 my-8 rounded flex flex-col place-content-between">
+          <div className="flex justify-center">
+            <h1 className="text-2xl font-semibold">채팅방 목록</h1>
+          </div>
           <ChatRooms />
           <JoinRoomInput nickname={session!.user.nickname} />
         </div>
