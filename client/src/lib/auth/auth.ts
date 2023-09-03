@@ -1,11 +1,12 @@
-import NextAuth from 'next-auth';
+import NextAuth, { NextAuthOptions } from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
 import prisma from '../prisma';
 import { User } from '@prisma/client';
 
-const authOptions = {
+const authOptions: NextAuthOptions = {
   providers: [
     CredentialsProvider({
+      id: 'credentials',
       name: 'credentials',
       credentials: {
         studentId: { label: 'studentId', type: 'number' },
@@ -41,7 +42,7 @@ const authOptions = {
   },
 
   callbacks: {
-    jwt: async ({ token, user }: { token: any; user: User }) => {
+    jwt: async ({ token, user }: any) => {
       if (user) {
         token.user = {};
         token.user.studentId = user.studentId;

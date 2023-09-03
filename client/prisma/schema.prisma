@@ -30,4 +30,29 @@ model User {
   studentNumber Int
   role          Role      @default(USER)
   birthday      DateTime?
+
+  chatRooms ChatRoom[]
+  chats     Chat[]
+}
+
+model ChatRoom {
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+  title     String
+  users     User[]
+  userCount Int      @default(0)
+  chats     Chat[]
+  chatCount Int      @default(0)
+}
+
+model Chat {
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+  content   String
+
+  author   User   @relation(fields: [authorId], references: [id])
+  authorId String
+
+  chatRoom   ChatRoom @relation(fields: [chatRoomId], references: [id])
+  chatRoomId String
 }

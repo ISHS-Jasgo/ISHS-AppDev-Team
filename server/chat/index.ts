@@ -1,11 +1,16 @@
-import express from 'express';
 import http from 'http';
+import express from 'express';
+import cors from 'cors';
 import { Server } from 'socket.io';
-
-const port = 3001;
+///
 
 const app = express();
+app.use(cors());
+
 const server = http.createServer(app);
+server.listen(3001, () => {
+  console.log('listening on *:3001');
+});
 
 const io = new Server(server, {
   cors: {
@@ -13,19 +18,18 @@ const io = new Server(server, {
   },
 });
 
-io.on('connection', (socket) => {
+const apiUrl = 'http://localhost:3000';
+const chat = io.of('/chat');
+
+chat.on('connection', async (socket) => {
   console.log('a user connected');
-  console.log(socket.id);
 
-  socket.on('disconnect', () => {
-    console.log('user disconnected');
+  const chatRooms = await (await fetch(`${apiUrl}/api/chat/find`)).json();
+  io.of('chat').emit('chatRooms', chatRooms);
+
+  socket.on('newRoom', async () => {
+    console.log('newRoom');
+    const chatRooms = await (await fetch(`${apiUrl}/api/chat/find`)).json();
+    io.of('chat').emit('chatRooms', chatRooms);
   });
-
-  socket.on('hey', (data) => {
-    console.log(`You sended message for ${data} times`);
-  });
-});
-
-server.listen(port, () => {
-  console.log(`Chat server listening on port ${port}`);
 });
