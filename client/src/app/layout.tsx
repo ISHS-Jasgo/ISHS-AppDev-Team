@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko" className={`w-full h-full ${noto_sans_kr.className}`}>
-      <body className="w-full h-full">
+      <body className="w-full h-full antialiased">
         <Wrapper>{children}</Wrapper>
       </body>
     </html>
