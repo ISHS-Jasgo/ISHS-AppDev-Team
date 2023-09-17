@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Navigation() {
   return (
-    <div className="bg-blue-500 md:basis-[2.5rem] basis-8 flex flex-col justify-center">
+    <div className="bg-blue-500 2xl:h-10 xl:h-9 h-8 flex flex-col justify-center">
       <div className="flex justify-center gap-10 text-white md:text-base text-sm">
         <Link href="/info">학교 소개</Link>
         <Link href="/knowledge">지식 in곽</Link>

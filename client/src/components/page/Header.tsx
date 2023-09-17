@@ -4,37 +4,38 @@ import logISHS from '@/images/main/logISHS.png';
 import mainLogo from '@/images/main/mainLogo.jpg';
 import SearchBar from './SearchBar';
 import Ddate from './Dday';
+import RegisterBtn from './RegisterBtn';
+import Modal from '../ui/Modal';
+import AuthModal from '../auth/AuthModal';
 
 export default function Header() {
   return (
-    <div className="flex flex-col md:basis-[7.5rem] basis-24 justify-center">
-      <div className="flex">
-        <div className="basis-1/3 flex justify-center gap-3 ">
-          <div className="md:w-[85px] w-[55px]">
+    <div className="flex flex-col 3xl:h-32 xl:h-28 h-24 justify-center grow-0">
+      <div className="flex h-full justify-between px-3">
+        <div className="basis-1/3 3xl:py-5 xl:py-[1.15rem] py-[0.9rem] shrink-0 grow">
+          <div className="flex md:justify-center gap-3 h-full">
             <Link href="/main">
-              <Image src={mainLogo} alt="logo" />
+              <Image src={mainLogo} alt="logo" className="h-full w-auto" />
+            </Link>
+            <Link href="/main" className="my-1">
+              <Image src={logISHS} alt="logo" className="h-full w-auto" />
             </Link>
           </div>
-          <div className="md:w-[200px] w-[150px]">
-            <Link href="/main">
-              <Image src={logISHS} alt="logo" />
-            </Link>
+        </div>
+        <div className="xl:basis-1/3 basis-3/4 flex-col justify-center px-3 hidden md:flex ">
+          <div className="flex justify-center">
+            <SearchBar />
           </div>
         </div>
-        <div className="xl:basis-1/3 basis-2/3 flex flex-col justify-center px-3">
-          <SearchBar />
-        </div>
-        <div className="xl:flex basis-1/3 hidden justify-center relative">
-          <div className="relative right-8 top-2">
-            <Ddate />
-          </div>
+        <div className="flex basis-1/3 px-3 flex-row-reverse w-fit">
+          <RegisterBtn />
+          <Ddate />
         </div>
       </div>
-      <div className="absolute flex gap-1 top-2 right-2">
-        <Link href="/main/signin">로그인</Link>
-        <span>/</span>
-        <Link href="/main/signup">회원가입</Link>
-      </div>
+      <div className="absolute top-2 right-2"></div>
+      <Modal>
+        <AuthModal />
+      </Modal>
     </div>
   );
 }
